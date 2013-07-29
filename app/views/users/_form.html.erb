@@ -20,14 +20,6 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :crypted_password %><br />
-    <%= f.text_field :crypted_password %>
-  </div>
-  <div class="field">
-    <%= f.label :salt %><br />
-    <%= f.text_field :salt %>
-  </div>
-  <div class="field">
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name %>
   </div>
@@ -52,8 +44,12 @@
     <%= f.text_field :location %>
   </div>
   <div class="field">
-    <%= f.label :stripe_id %><br />
-    <%= f.number_field :stripe_id %>
+    <%= f.label :password %><br/>
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation %><br/>
+    <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
     <%= f.submit %>

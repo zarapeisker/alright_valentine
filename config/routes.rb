@@ -1,11 +1,12 @@
 AlrightValentine::Application.routes.draw do
-  resources :messages
 
-
-  resources :pictures
-
-
+  root :to => 'users#index'
+  resources :user_sessions
   resources :users
+  resources :messages
+  resources :pictures
+  match 'login' => 'user_sessions#new', :as => :login
+  match 'logout' => 'user_sessions#destroy', :as => :logout
 
 
   # The priority is based upon order of creation:
